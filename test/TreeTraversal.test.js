@@ -50,43 +50,43 @@ describe('TreeTraversal', () => {
 
     let subject;
 
-    before(() =>{
+    before(() => {
         subject = new TreeTraversal();
     });
 
-    describe('showTreeRecursively_PreOrderTraversal', () => {
+    describe('recursively_PreOrderTraversal', () => {
 
         let expected = ["F","B","A","D","C","E","G","I","H"];
         it(`should return ${expected}`, () => {
 
-            subject.showTreeRecursively_PreOrderTraversal(root, true);
+            subject.recursively_PreOrderTraversal(root, true);
             expect(arrayEqual(expected, subject.PathResult)).to.be.true;
         });
     });
-    describe('showTreeRecursively_InOrderTraversal', () => {
+    describe('recursively_InOrderTraversal', () => {
 
         let expected = ["A","B","C","D","E","F","G","H","I"];
         it(`should return ${expected}`, () => {
 
-            subject.showTreeRecursively_InOrderTraversal(root, true);
+            subject.recursively_InOrderTraversal(root, true);
             expect(arrayEqual(expected, subject.PathResult)).to.be.true;
         });
     });
-    describe('showTreeRecursively_PostOrderTraversal', () => {
+    describe('recursively_PostOrderTraversal', () => {
 
         let expected = ["A","C","E","D","B","H","I","G","F"];
         it(`should return ${expected}`, () => {
 
-            subject.showTreeRecursively_PostOrderTraversal(root, true);
+            subject.recursively_PostOrderTraversal(root, true);
             expect(arrayEqual(expected, subject.PathResult)).to.be.true;
         });
     });
-    describe('showTreeBreadthFirst', () => {
+    describe('breadthFirst', () => {
 
         let expected = ["F","B","G","A","D","I","C","E","H"];
         it(`should return ${expected}`, () => {
 
-            subject.showTreeBreadthFirst(root, true);
+            subject.breadthFirst(root, true);
             expect(arrayEqual(expected, subject.PathResult)).to.be.true;
         });
     });
